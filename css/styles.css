@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 15px 0;
+    /*background: #4166f5;*/
+    font-family:'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: #4166f5;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+
+}
+.navbar .logo a span{
+    color: #4166f5;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: #4166f5;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+/* navbar styling end*/
+
+/* menu btn styling start*/
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+/* menu btn styling end*/
+
+/* home section styling */
+.home{
+    display:flex;
+    background: url("/home/est/Nesto/moringa-school-projects/portfolio-ernest/images/banner.jpg") no-repeat center;
+    height:100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family:'Ubuntu', sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin-left: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: #4166f5;
+    font-weight: 500;
+}
+.home .home-content a{
+    display: inline-block;
+    background: #4166f5;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #4166f5;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: #4166f5;
+    background: none;
+    border: 2px solid #4166f5;
+}
+/* home section styling end */
+
+/*similar section syling start*/
+section{
+    padding: 100px 0;
+}
+.about-me, .projects, footer{
+    font-family: 'Poppins', sans-serif;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%)
+}
+section .title::after{
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    font-size: 20px;
+    color: #4166f5;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%)
+}
+/*similar section styling end*/
+
+/*about-me section styling start*/
+
+.about-me .title::after{
+    content: "who Ernest is";
+}
+.about-me .about-me-content, .projects .projects-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-between;
+}
+.about-me .about-me-content .left{
+    width: 45%;
+}
+.about-me .about-me-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.about-me .about-me-content .right{
+    width: 55%;
+}
+.about-me .about-me-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about-me .about-me-content .right .text span{
+    color: #4166f5;
+}
+.about-me .about-me-content .right p{
+    text-align: justify;
+}
+.about-me .about-me-content .right a{
+    display: inline-block;
+    background: #4166f5;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 1px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #4166f5;
+    transition: all 0.3s ease;
+}
+.about-me .about-me-content .right a:hover{
+    color: #4166f5;
+    background: none;
+}
+/*about-me section styling end*/
+
+/*projects section styling start*/
+.projects{
+    color: #fff;
+    background: #111;
+}
+.projects .title::before{
+    background: #fff
+    ;
+}
+.projects .title::after{
+    background: #111;
+    content: "past projects";
+}
+.projects .projects-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.projects .projects-content .card:hover{
+    background: #4166f5;
+}
+.projects .projects-content .box{
+    transition: all 0.3s ease;
+}
+.projects .projects-content .card:hover .box{
+    transform: scale(1.05);
+}
+.projects .projects-content .card i{
+    font-size: 50px;
+    color: #4166f5;
+    transition: color 0.3s ease;
+}
+.projects .projects-content .card:hover i{
+    color: #fff;
+}
+.projects .projects-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+/*projects section styling end*/
+
+/*footer section styling start*/
+footer{
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+}
+footer span a{
+    color: #4166f5;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+/*footer section styling start*/
+
+/*responsive media query start*/
+@media (max-width: 1300px){
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+@media (max-width: 1104px){
+    .about-me .about-me-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+@media (max-width: 991px){
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0%;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 800px;
+    }
+    .about-me .about-me-content .column{
+        width: 100%;
+    }
+    .about-me .about-me-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about-me .about-me-content .right{
+        flex: 100%;
+    }
+    .projects .projects-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+}  
+@media (max-width: 690px){
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .projects .projects-content .card{
+        width: 100%;
+    }
+}
+@media (max-width: 500px){
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+}
+/*responsive media query end*/
