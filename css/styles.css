@@ -73,7 +73,7 @@
 /* home section styling */
 .home{
     display:flex;
-    background: url("../home/est/Nesto/moringa-school-projects/portfolio-ernest/images/banner.jpg") no-repeat center;
+    background: url(../images/banner.jpg) no-repeat center;
     height:100vh;
     color: #fff;
     min-height: 500px;
